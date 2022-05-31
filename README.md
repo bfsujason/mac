@@ -46,7 +46,7 @@ python mark_disagreement.py -a1 test/intertext_01/test-anno-1.001_zh.001_en.xml 
 
 The observed differences are then resolved through discussions between the annotators. We found that many disagreements can be attributed to various translation techniques (e.g., omission, addition and sentence inversion) employed by translators to make the target texts more fluent and adequate.
 
-All the cases of annotator differences and the corresponding resolutions have been recorded in an Excel file [anno_disagreement.xlsx](./test/anno_disagreement.xlsx). The final alignments verified by both annotators are saved in the directory [dev/Intertext](./dev/Intertext) and [test/Intertext](./test/Intertext).
+All the cases of annotator differences and the corresponding resolutions have been recorded in an Excel file [anno_disagreement.xlsx](./test/anno_disagreement.xlsx). The final alignments verified by both annotators are saved in the directory [dev/intertext](./dev/intertext) and [test/intertext](./test/intertext).
 
 We use the set-based metric Jaccard Index as suggested by Artstein & Poesio (2008) to measure the Inter-Coder Agreement (ICA):
 
