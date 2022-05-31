@@ -56,7 +56,7 @@ python compute_ica.py -a1 test/intertext_01 -a2 test/intertext_02
 
 ## TSV Format
 
-To facilitate follow-up search and annotation of parallel corpus, you can run the Python script [intertext2tsv.py](./intertext2tsv.py) to convert Intertext XML files into TSV format:
+To facilitate follow-up search and annotation of the parallel corpus, you can run the Python script [intertext2tsv.py](./intertext2tsv.py) to convert Intertext XML files into TSV format:
 
 ```bash
 python intertext2tsv.py -i test/intertext -o test/tsv
