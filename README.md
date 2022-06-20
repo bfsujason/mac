@@ -1,16 +1,16 @@
-# MAPC
+# MAC
 
-MAPC is a manually aligned parallel corpus of Chinese-English literary texts, consisting of chapters sampled from six Chinese novels and their English translations.
+MAC is a manually aligned Chinese-English parallel corpus of  literary texts, consisting of chapters sampled from six Chinese novels and their English translations.
 
-Although MAPC is initially created for evaluating the performance of automatic sentence aligners such as [Hunalign](http://mokk.bme.hu/en/resources/hunalign/), [Belualign](https://github.com/rsennrich/Bleualign), [Vecalign](https://github.com/thompsonb/vecalign) and [Bertalign](https://github.com/bfsujason/bertalign),  the corpus can also be used in the study of contrastive linguistics, the difference between translated v.s. non-translated language and translation strategies, etc.
+Although MAC is initially created for evaluating the performance of automatic sentence aligners such as [Gale-Church](https://aclanthology.org/J93-1004/), [Hunalign](http://mokk.bme.hu/en/resources/hunalign/), [Belualign](https://github.com/rsennrich/Bleualign), [Vecalign](https://github.com/thompsonb/vecalign) and [Bertalign](https://github.com/bfsujason/bertalign),  the corpus can also be used in the study of contrastive linguistics, the difference between translated v.s. non-translated language and translation strategies, etc.
 
 ## Makeup and Statistics
 
-The novels in MAPC are selected from a range of different genres and for each novel, five chapters are sampled from the beginning, middle and end of the book. We then take one chapter from each novel and construct a development set [MAPC-Dev](./dev). The remaining chapters make up [MAPC-Test](./test).
+The novels in MAC are selected from a range of different genres and for each novel, five chapters are sampled from the beginning, middle and end of the book. We then take one chapter from each novel and construct a development set [MAC-Dev](./dev). The remaining chapters make up [MAC-Test](./test).
 
 Please check  [Dev-metadata](./dev/meta_data.tsv) and [Test-metadata](./test/meta_data.tsv) for more information about the development and test set.
 
-##### Table 1. Makeup of MAPC
+##### Table 1. Makeup of MAC
 
 | Genre        | Book_Title | Author | Trans_Title                    | Translator                     |
 | ------------ | ---------- | ------ | ------------------------------ | ------------------------------ |
@@ -21,7 +21,7 @@ Please check  [Dev-metadata](./dev/meta_data.tsv) and [Test-metadata](./test/met
 | Romance      | 长恨歌        | 王安忆    | The Song of Everlasting Sorrow | Michael Berry; Susan Chan Egan |
 | Sci-fi       | 三体         | 刘慈欣    | The Three-Body Problem         | Ken Liu                        |
 
-##### Table 2. Statistics of MAPC
+##### Table 2. Statistics of MAC
 
 | Data     | # Src_Sents | # Tgt_Sents | # Src_Tokens | # Tgt_Tokens |
 | -------- |:----------- | ----------- | ------------ | ------------ |
@@ -30,7 +30,7 @@ Please check  [Dev-metadata](./dev/meta_data.tsv) and [Test-metadata](./test/met
 
 ## Manual Alignment and Inter-Coder Agreement
 
-The bilingual texts in MAPC are split into sentences and aligned at the sentence level using the manual alignment tool [InterText](https://wanthalf.saga.cz/intertext).
+The bilingual texts in MAC are split into sentences and aligned at sentence level using the manual alignment tool [InterText](https://wanthalf.saga.cz/intertext).
 
 The manual alignment was made by two annotators to ensure accuracy and reliability. The hand-checked alignments are saved in the directory [intertext_01](./test/intertext_01) for the first annotator and [intertext_02](./test/intertext_02) for the second annotator.
 
@@ -44,9 +44,9 @@ python mark_disagreement.py -a1 test/intertext_01/test-anno-1.001_zh.001_en.xml 
 
 ##### Figure 1. Markup of Annotator Differences
 
-The observed differences are then resolved through discussions between the annotators. We found that many disagreements can be attributed to various translation techniques (e.g., omission, addition and sentence inversion) employed by translators to make the target texts more fluent and adequate.
+The observed differences are then resolved through discussions between the annotators. We found that many disagreements can be attributed to various translation techniques (e.g., omission, addition and sentence inversion) employed by translators to make the target texts more adequate and fluent.
 
-All the cases of annotator differences and the corresponding resolutions have been recorded in an Excel file [anno_disagreement.xlsx](./test/anno_disagreement.xlsx). The final alignments verified by both annotators are saved in the directory [dev/intertext](./dev/intertext) and [test/intertext](./test/intertext).
+All the cases of annotator differences and the corresponding resolutions have been recorded in an Excel file [anno_disagreement.xlsx](./test/anno_disagreement.xlsx). The final alignments verified by both annotators are saved in the directory [dev/Intertext](./dev/Intertext) and [test/Intertext](./test/Intertext).
 
 We use the set-based metric Jaccard Index as suggested by Artstein & Poesio (2008) to measure the Inter-Coder Agreement (ICA):
 
@@ -56,7 +56,7 @@ python compute_ica.py -a1 test/intertext_01 -a2 test/intertext_02
 
 ## TSV Format
 
-To facilitate follow-up search and annotation of the parallel corpus, you can run the Python script [intertext2tsv.py](./intertext2tsv.py) to convert Intertext XML files into TSV format:
+To facilitate follow-up search and annotation of parallel corpus, you can run the Python script [intertext2tsv.py](./intertext2tsv.py) to convert Intertext XML files into TSV format:
 
 ```bash
 python intertext2tsv.py -i test/intertext -o test/tsv
