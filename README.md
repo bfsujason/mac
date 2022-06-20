@@ -48,7 +48,7 @@ The observed differences are then resolved through discussions between the annot
 
 All the cases of annotator differences and the corresponding resolutions have been recorded in an Excel file [anno_disagreement.xlsx](./test/anno_disagreement.xlsx). The final alignments verified by both annotators are saved in the directory [dev/Intertext](./dev/Intertext) and [test/Intertext](./test/Intertext).
 
-We use the set-based metric Jaccard Index as suggested by Artstein & Poesio (2008) to measure the Inter-Coder Agreement (ICA):
+We use the script [compute_ica.py](./compute_ica.py), which implements the set-based metric Jaccard Index as suggested by Artstein & Poesio (2008), to measure the Inter-Coder Agreement (ICA):
 
 ```bash
 python compute_ica.py -a1 test/intertext_01 -a2 test/intertext_02
