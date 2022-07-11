@@ -1,6 +1,6 @@
 # MAC
 
-MAC is a manually aligned Chinese-English parallel corpus of  literary texts, consisting of chapters sampled from six Chinese novels and their English translations.
+MAC is a manually aligned Chinese-English parallel corpus of literary texts, consisting of chapters sampled from six Chinese novels and their English translations.
 
 Although MAC is initially created for evaluating the performance of automatic sentence aligners such as [Gale-Church](https://aclanthology.org/J93-1004/), [Hunalign](http://mokk.bme.hu/en/resources/hunalign/), [Belualign](https://github.com/rsennrich/Bleualign), [Vecalign](https://github.com/thompsonb/vecalign) and [Bertalign](https://github.com/bfsujason/bertalign),  the corpus can also be used in the study of contrastive linguistics, the difference between translated v.s. non-translated language and translation strategies, etc.
 
@@ -27,7 +27,7 @@ Please check  [Dev-metadata](./dev/meta_data.tsv) and [Test-metadata](./test/met
 | -------- |:----------- | ----------- | ------------ | ------------ | ------------ |
 | MAC-Dev  | 1,444       | 1,947       | 21,911       | 31,374       | 817 (61.5)   |
 | MAC-Test | 4,799       | 6,573       | 73,635       | 105,407      | 2,628 (59.8) |
-| Total    | 6,243       | 8,520       | 95,546       | 136,781      | 3,445 (60.2) |
+| **Total**    | 6,243       | 8,520       | 95,546       | 136,781      | 3,445 (60.2) |
 
 ## Manual Alignment and Inter-Coder Agreement
 
