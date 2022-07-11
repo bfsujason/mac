@@ -4,7 +4,7 @@ from ast import literal_eval
 import argparse
 
 def main():
-    parser = argparse.ArgumentParser(description='Multilingual sentence embeddings')
+    parser = argparse.ArgumentParser(description='Compute corpus statstistics.')
     parser.add_argument('-i', '--input', type=str, required=True, help='Data directory.')
     parser.add_argument('-o', '--output', type=str, required=True, help='Stats file.')
     args = parser.parse_args()
