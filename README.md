@@ -23,10 +23,11 @@ Please check  [Dev-metadata](./dev/meta_data.tsv) and [Test-metadata](./test/met
 
 ##### Table 2. Statistics of MAC
 
-| Data     | # Src_Sents | # Tgt_Sents | # Src_Tokens | # Tgt_Tokens |
-| -------- |:----------- | ----------- | ------------ | ------------ |
-| MAC-Dev  | 1,391       | 2,505       | 37,024       | 47,959       |
-| MAC-Test | 4,875       | 6,610       | 91,971       | 121,306      |
+| Data     | # Src_Sents | # Tgt_Sents | # Src_Tokens | # Tgt_Tokens | # 1-1 (%)    |
+| -------- |:----------- | ----------- | ------------ | ------------ | ------------ |
+| MAC-Dev  | 1,444       | 1,947       | 21,911       | 31,374       | 817 (61.5)   |
+| MAC-Test | 4,799       | 6,573       | 73,635       | 105,407      | 2,628 (59.8) |
+| Total    | 6,243       | 8,520       | 95,546       | 136,781      | 3,445 (60.2) |
 
 ## Manual Alignment and Inter-Coder Agreement
 
